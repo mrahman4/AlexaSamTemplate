@@ -1,0 +1,165 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "mariam journey",
+            "intents": [
+                {
+                    "name": "AnswerIntent",
+                    "slots": [
+                        {
+                            "name": "answer_actor",
+                            "type": "AMAZON.Actor"
+                        },
+                        {
+                            "name": "answer_animal",
+                            "type": "AMAZON.Animal"
+                        },
+                        {
+                            "name": "answer_atrist",
+                            "type": "AMAZON.Artist"
+                        },
+                        {
+                            "name": "answer_athlete",
+                            "type": "AMAZON.Athlete"
+                        },
+                        {
+                            "name": "answer_author",
+                            "type": "AMAZON.Author"
+                        },
+                        {
+                            "name": "answer_color",
+                            "type": "AMAZON.Color"
+                        },
+                        {
+                            "name": "answer_book",
+                            "type": "AMAZON.Book"
+                        },
+                        {
+                            "name": "answer_country",
+                            "type": "AMAZON.Country"
+                        },
+                        {
+                            "name": "answer_device",
+                            "type": "AMAZON.DeviceType"
+                        },
+                        {
+                            "name": "answer_fiction",
+                            "type": "AMAZON.FictionalCharacter"
+                        },
+                        {
+                            "name": "answer_landmark",
+                            "type": "AMAZON.LandmarksOrHistoricalBuildings"
+                        },
+                        {
+                            "name": "answer_month",
+                            "type": "AMAZON.Month"
+                        },
+                        {
+                            "name": "answer_professional",
+                            "type": "AMAZON.Professional"
+                        },
+                        {
+                            "name": "answer_room",
+                            "type": "AMAZON.Room"
+                        },
+                        {
+                            "name": "answer_us_city",
+                            "type": "AMAZON.US_CITY"
+                        },
+                        {
+                            "name": "answer_europe_city",
+                            "type": "AMAZON.EUROPE_CITY"
+                        },
+                        {
+                            "name": "answer_number",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "answer_string",
+                            "type": "AnswerString"
+                        }
+                    ],
+                    "samples": [
+                        "{answer_actor}",
+                        "{answer_animal}",
+                        "{answer_atrist}",
+                        "{answer_athlete}",
+                        "{answer_author}",
+                        "{answer_book}",
+                        "{answer_color}",
+                        "{answer_country}",
+                        "{answer_device}",
+                        "{answer_fiction}",
+                        "{answer_landmark}",
+                        "{answer_month}",
+                        "{answer_professional}",
+                        "{answer_room}",
+                        "{answer_us_city}",
+                        "{answer_europe_city}",
+                        "{answer_number}",
+                        "{answer_string}"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.RepeatIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StartOverIntent",
+                    "samples": []
+                },
+                {
+                    "name": "DoneIntent",
+                    "slots": [],
+                    "samples": [
+                        "No",
+                        "done"
+                    ]
+                },
+                {
+                    "name": "ContinueIntent",
+                    "slots": [],
+                    "samples": [
+                        "Yes",
+                        "continue",
+                        "start game",
+                        "start journey",
+                        "restart game",
+                        "restart journey",
+                        "new game",
+                        "new journey"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "AnswerString",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Country Name"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Flag Color"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

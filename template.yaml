@@ -1,0 +1,61 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: Demonstrates a Play_with_Mariam skill built with the Amazon Alexa Skills Kit.
+Parameters:
+  StoriesTableName:
+    Type: String
+    Default: "StoriesTable"
+    Description: "table contains all stories"
+  PartsTableName:
+    Type: String
+    Default: "StoryPartsTable"
+    Description: "table contains all parts for all stories"
+Resources:
+  alexaskillplaywithmariam:
+    Type: 'AWS::Serverless::Function'
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs6.10
+      CodeUri: .
+      Description: Demonstrates a Play_with_Mariam skill built with the Amazon Alexa Skills Kit.
+      MemorySize: 128
+      Timeout: 3
+      Policies:
+        - AWSLambdaBasicExecutionRole
+        - AmazonDynamoDBReadOnlyAccess
+      Events:
+        AlexaSkillEvent:
+          Type: AlexaSkill
+      Environment:
+        Variables:
+          StoriesTable: !Ref StoriesTable
+          StoryPartsTable: !Ref StoryPartsTable
+  StoriesTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName:
+        Ref: StoriesTableName
+      PrimaryKey:
+        Name: pkStoryID
+        Type: Number
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
+  StoryPartsTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName:
+        Ref: PartsTableName
+        AttributeDefinitions:
+          -
+            AttributeName: pkStoryID
+            AttributeType: S
+          -
+            AttributeName: skPartID
+            AttributeType: S
+      PrimaryKey:
+        Name: pkStoryID
+        Type: Number
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
