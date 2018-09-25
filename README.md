@@ -19,57 +19,226 @@ Or click [here](./instructions/7-cli.md) for instructions using the ASK CLI (com
 1- **StoriesTable**
 <table class="tg">
   <tr>
-    <th class="tg-yw4l"><b>Column</b></th>
-    <th class="tg-yw4l"><b>Notes</b></th>
+    <th class="tg-yw4l"><b>Field</b></th>
+    <th class="tg-yw4l"><b>Type</b></th>
+    <th class="tg-yw4l"><b>Mandatory</b></th>
+    <th class="tg-yw4l"><b>Description</b></th>
     <th class="tg-yw4l"><b>Example</b></th>
   </tr>
   <tr>
     <td class="tg-yw4l">pkStoryID</td>
-    <td class="tg-yw4l">Number. Represent the a unique story number. When Alexa skill start it pick a random story.</td>
+    <td class="tg-yw4l">Number</td>
+    <td class="tg-yw4l">Yes</td>
+    <td class="tg-yw4l">Represent the a unique story number. When Alexa skill start it pick a random story.</td>
     <td class="tg-yw4l">2</td>
   </tr>
   <tr>
     <td class="tg-yw4l">firstPartID</td>
-    <td class="tg-yw4l">Number. point to this story first story in parts table</td>
+    <td class="tg-yw4l">Number</td>
+    <td class="tg-yw4l">Yes</td>
+    <td class="tg-yw4l">Point to this story first story in parts table</td>
     <td class="tg-yw4l">40</td>
   </tr>
 </table>
 
-| Column        | Notes                                                                                        | Example  |
-| ------------- |:--------------------------------------------------------------------------------------------:| --------:|
-| pkStoryID     | Number. Represent the a unique story number. When Alexa skill start it pick a random story.  |    2     |
-| firstPartID   | Number. point to this story first story in parts table                                       |    40    |
-
 
 1- **StoryPartsTable**
-| Column        | Notes                                                                               | Example  |
-| ------------- |:-----------------------------------------------------------------------------------:| --------:|
-| pkStoryID     | Number. Represent the story number.                                                                       |    2     |
-| skPartID      | Number. Represent the a unique part ID                                                                    |    40    |
-| lastPart      | Number. 1 means last part in this story. Alexa will end the conversation. 0 means, user input is expected.|    0     |
-| speechOutput  | String. Alexa will say this text. You can use SSML                                                                          |    <prosody rate=\"medium\"> Today is first day <break time=\"1s\"/> in school after summer vacation. </prosody>    |
-| repromptSpeech      | String. Text that will appear in Card                              |    first day    |
-| partType      | Number. Can equal 1 or 2. 1 means Choice part so based on user choice sequance of parts will differ. 2 means Question part.                               |    1    |
-| option1Answer      | Number. point to this story first story in parts table                              |    40    |
-| option1PartID      | Number. point to this story first story in parts table                              |    40    |
-| option1Type      | Number. point to this story first story in parts table                              |    40    |
-| option2Answer      | Number. point to this story first story in parts table                              |    40    |
-| option2PartID      | Number. point to this story first story in parts table                              |    40    |
-| option2Type      | Number. point to this story first story in parts table                              |    40    |
-| targetAnswer      | Number. point to this story first story in parts table                              |    40    |
-| targetAnswerType      | Number. point to this story first story in parts table                              |    40    |
-| targetAnswerNextPart      | Number. point to this story first story in parts table                              |    40    |
-| cardContent      | Number. point to this story first story in parts table                              |    40    |
-| cardTitle      | Number. point to this story first story in parts table                              |    40    |
-| largeImageUrl      | Number. point to this story first story in parts table                              |    40    |
-| smallImageUrl      | Number. point to this story first story in parts table                              |    40    |
-| hintSpeechOutput      | Number. point to this story first story in parts table                              |    40    |
-| hintRepromptSpeech      | Number. point to this story first story in parts table                              |    40    |
-| hintCardContent      | Number. point to this story first story in parts table                              |    40    |
-| hintCardTitle      | Number. point to this story first story in parts table                              |    40    |
-| hintLargeImageUrl      | Number. point to this story first story in parts table                              |    40    |
-| hintSmallImageUrl      | Number. point to this story first story in parts table                              |    40    |
+Each story part can be a question that user need to answer to move the next part, or user should select between 2 choices and based on his selection the next parts will be different  
 
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Field</b></th>
+    <th class="tg-yw4l"><b>Type</b></th>
+    <th class="tg-yw4l"><b>Mandatory</b></th>
+    <th class="tg-yw4l"><b>Description</b></th>
+    <th class="tg-yw4l"><b>Example</b></th>
+  </tr>
+
+  <tr>
+    <td class="tg-yw4l">pkStoryID</td>
+    <td class="tg-yw4l">Number</td>
+    <td class="tg-yw4l">Yes</td>
+    <td class="tg-yw4l">Represent the story number.</td>
+    <td class="tg-yw4l">2</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">skPartID</td>
+    <td class="tg-yw4l">Number</td>
+    <td class="tg-yw4l">Yes</td>
+    <td class="tg-yw4l">Represent the a unique part ID.</td>
+    <td class="tg-yw4l">40</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">lastPart</td>
+    <td class="tg-yw4l">Number 0 or 1</td>
+    <td class="tg-yw4l">Yes</td>
+    <td class="tg-yw4l">1 means last part in this story. Alexa will end the conversation. 0 means, user input is expected.</td>
+    <td class="tg-yw4l">0</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">partType</td>
+    <td class="tg-yw4l">Number 1 or 2</td>
+    <td class="tg-yw4l">Yes</td>
+    <td class="tg-yw4l">1 means Choice part so based on user choice sequance of parts will differ. 2 means Question part.</td>
+    <td class="tg-yw4l">1</td>
+  </tr>
+
+  <tr>
+    <td class="tg-yw4l">speechOutput</td>
+    <td class="tg-yw4l">String</td>
+    <td class="tg-yw4l">Yes</td>
+    <td class="tg-yw4l">Alexa will say this text. You can use SSML.</td>
+    <td class="tg-yw4l"><prosody rate=\"medium\"> Today is first day <break time=\"1s\"/> in school after summer vacation. </prosody></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">repromptSpeech</td>
+    <td class="tg-yw4l">String</td>
+    <td class="tg-yw4l">Yes</td>
+    <td class="tg-yw4l">Text without SSML tags</td>
+    <td class="tg-yw4l">first day</td>
+  </tr>
+
+  <tr>
+    <td class="tg-yw4l">cardTitle</td>
+    <td class="tg-yw4l">String</td>
+    <td class="tg-yw4l">Optional</td>
+    <td class="tg-yw4l">Title of the Card</td>
+    <td class="tg-yw4l">Guess the Country Name</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">cardContent</td>
+    <td class="tg-yw4l">String</td>
+    <td class="tg-yw4l">Optional</td>
+    <td class="tg-yw4l">Card Content</td>
+    <td class="tg-yw4l">Country of Eiffel Tower</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">largeImageUrl</td>
+    <td class="tg-yw4l">String</td>
+    <td class="tg-yw4l">Optional</td>
+    <td class="tg-yw4l">Card large Image. Ensure to follow Alexa requirements in image</td>
+    <td class="tg-yw4l">https://....</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">smallImageUrl</td>
+    <td class="tg-yw4l">String</td>
+    <td class="tg-yw4l">Optional</td>
+    <td class="tg-yw4l">Card small Image. Ensure to follow Alexa requirements in image</td>
+    <td class="tg-yw4l">https://....</td>
+  </tr>
+
+  <tr>
+    <td class="tg-yw4l">option1PartID</td>
+    <td class="tg-yw4l">Number</td>
+    <td class="tg-yw4l">Yes if part type = 1</td>
+    <td class="tg-yw4l">In case user select this option. This will be the ID that Alexa will move to it next</td>
+    <td class="tg-yw4l">4</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">option1Type</td>
+    <td class="tg-yw4l">Number</td>
+    <td class="tg-yw4l">Yes if part type = 1</td>
+    <td class="tg-yw4l">This equivalents to categories Alexa will support whatever it is default such as list of countries or custom list of values. Value will be determined based on Configuration.js file inside Lambda and Developer implementation</td>
+    <td class="tg-yw4l">4</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">option1Answer</td>
+    <td class="tg-yw4l">String</td>
+    <td class="tg-yw4l">Yes if part type = 1</td>
+    <td class="tg-yw4l">Alexa will match user input with this value to detect if user want this option or the 2nd option</td>
+    <td class="tg-yw4l">Country Name</td>
+  </tr>
+
+  <tr>
+    <td class="tg-yw4l">option2PartID</td>
+    <td class="tg-yw4l">Number</td>
+    <td class="tg-yw4l">Yes if part type = 1</td>
+    <td class="tg-yw4l">In case user select this option. This will be the ID that Alexa will move to it next</td>
+    <td class="tg-yw4l">4</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">option2Type</td>
+    <td class="tg-yw4l">Number</td>
+    <td class="tg-yw4l">Yes if part type = 1</td>
+    <td class="tg-yw4l">This equivalents to categories Alexa will support whatever it is default such as list of countries or custom list of values. Value will be determined based on Configuration.js file inside Lambda and Developer implementation</td>
+    <td class="tg-yw4l">4</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">option2Answer</td>
+    <td class="tg-yw4l">String</td>
+    <td class="tg-yw4l">Yes if part type = 1</td>
+    <td class="tg-yw4l">Alexa will match user input with this value to detect if user want this option or the 1st option</td>
+    <td class="tg-yw4l">Country Name</td>
+  </tr>
+
+
+  <tr>
+    <td class="tg-yw4l">targetAnswerNextPart</td>
+    <td class="tg-yw4l">Number</td>
+    <td class="tg-yw4l">Yes if part type = 2</td>
+    <td class="tg-yw4l">if user ansewer the question correctly, Alexa will move to part with this ID</td>
+    <td class="tg-yw4l">4</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">targetAnswerType</td>
+    <td class="tg-yw4l">Number</td>
+    <td class="tg-yw4l">Yes if part type = 2</td>
+    <td class="tg-yw4l">This equivalents to categories Alexa will support whatever it is default such as list of countries or custom list of values. Value will be determined based on Configuration.js file inside Lambda and Developer implementation</td>
+    <td class="tg-yw4l">4</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">targetAnswer</td>
+    <td class="tg-yw4l">String</td>
+    <td class="tg-yw4l">Yes if part type = 2</td>
+    <td class="tg-yw4l">Alexa will match user input with this value to detect if user correctly answer the question or not</td>
+    <td class="tg-yw4l">France</td>
+  </tr>
+
+
+  <tr>
+    <td class="tg-yw4l">hintSpeechOutput</td>
+    <td class="tg-yw4l">String</td>
+    <td class="tg-yw4l">Yes</td>
+    <td class="tg-yw4l">Alexa will say this text when user give wrong answer to help him. You can't use SSML here.</td>
+    <td class="tg-yw4l">As a hint, it is Capital is Paris. You can Google it if you don’t know. What is the Country Name?</prosody></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">hintRepromptSpeech</td>
+    <td class="tg-yw4l">String</td>
+    <td class="tg-yw4l">Yes</td>
+    <td class="tg-yw4l">Alexa will say this text when user give wrong answer to help him</td>
+    <td class="tg-yw4l">As a hint, it is Capital is Paris. You can Google it if you don’t know. What is the Country Name?</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">hintCardTitle</td>
+    <td class="tg-yw4l">String</td>
+    <td class="tg-yw4l">Optional</td>
+    <td class="tg-yw4l">Title of the hint Card</td>
+    <td class="tg-yw4l">Guess the Country Name</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">hintCardContent</td>
+    <td class="tg-yw4l">String</td>
+    <td class="tg-yw4l">Optional</td>
+    <td class="tg-yw4l">Hint card Content</td>
+    <td class="tg-yw4l">Country Capital is Paris</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">hintLargeImageUrl</td>
+    <td class="tg-yw4l">String</td>
+    <td class="tg-yw4l">Optional</td>
+    <td class="tg-yw4l">Hint card large Image. Ensure to follow Alexa requirements in image</td>
+    <td class="tg-yw4l">https://....</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">hintSmallImageUrl</td>
+    <td class="tg-yw4l">String</td>
+    <td class="tg-yw4l">Optional</td>
+    <td class="tg-yw4l">Hint card small Image. Ensure to follow Alexa requirements in image</td>
+    <td class="tg-yw4l">https://....</td>
+  </tr>
+
+</table>
 
 ## Lambda configuration
 
