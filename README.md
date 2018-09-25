@@ -17,6 +17,24 @@ Or click [here](./instructions/7-cli.md) for instructions using the ASK CLI (com
 ## How to fill the Database
 
 1- **StoriesTable**
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Column</b></th>
+    <th class="tg-yw4l"><b>Notes</b></th>
+    <th class="tg-yw4l"><b>Example</b></th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">pkStoryID</td>
+    <td class="tg-yw4l">Number. Represent the a unique story number. When Alexa skill start it pick a random story.</td>
+    <td class="tg-yw4l">2</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">firstPartID</td>
+    <td class="tg-yw4l">Number. point to this story first story in parts table</td>
+    <td class="tg-yw4l">40</td>
+  </tr>
+</table>
+
 | Column        | Notes                                                                                        | Example  |
 | ------------- |:--------------------------------------------------------------------------------------------:| --------:|
 | pkStoryID     | Number. Represent the a unique story number. When Alexa skill start it pick a random story.  |    2     |
