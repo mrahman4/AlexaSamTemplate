@@ -2,7 +2,7 @@
 <img src="https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/quiz-game/header._TTH_.png" />
 
 This Alexa template enable developer to easily implement a dynamic content Skill. And event after publishing the Skill he can still modify and maintain the skill content without need to change in Alexa model or Lambda code. This skill depend on data saved in DynamoDB table. You can configure every thing inside the database. voice tone, images that will appear in Alexa cards, Alexa reply in case user need help, order of conversation, different content every session,... etc  
-Each time user lunch the skill, skill will pic a different story from database and Lambda code will control dialogue with user using the story parts.
+Each time user lunch the skill, skill will pick a different story from database and Lambda code will control dialogue with user using the story parts.
 
 <!-- commenting this out temporariliy
 If you would like to see an example of this skill in action, you can enable the [Gloucester Facts](https://www.amazon.com/Robert-McCauley-Gloucester-Facts/dp/B01I5MOIA2/) from the [Alexa Skill Store](http://amazon.com/skills).
