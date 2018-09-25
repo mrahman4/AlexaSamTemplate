@@ -42,7 +42,8 @@ Or click [here](./instructions/7-cli.md) for instructions using the ASK CLI (com
 </table>
 
 
-1- **StoryPartsTable**
+
+2- **StoryPartsTable**
 Each story part can be a question that user need to answer to move the next part, or user should select between 2 choices and based on his selection the next parts will be different  
 
 <table class="tg">
@@ -242,10 +243,8 @@ Each story part can be a question that user need to answer to move the next part
 
 ## Lambda configuration
 
-1- Intent types
-2- Part type
-3- Last part in story
-
+1- **Configuration.js** : This file contains all lookup such: part type values, last type value, supported intent types. You can add or modify as you want
+2- **aa.js** : don't forget to check TODO comments.
 
 ## Additional Resources
 
