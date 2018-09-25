@@ -244,6 +244,7 @@ Each story part can be a question that user need to answer to move the next part
 ## Lambda configuration
 
 1- **Configuration.js** : This file contains all lookup such: part type values, last type value, supported intent types. You can add or modify as you want
+
 2- **aa.js** : don't forget to check TODO comments.
 
 ## Additional Resources
