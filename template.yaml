@@ -11,13 +11,13 @@ Parameters:
     Default: "StoryPartsTable"
     Description: "table contains all parts for all stories"
 Resources:
-  alexaskillplaywithmariam:
+  DynamicContentSkill:
     Type: 'AWS::Serverless::Function'
     Properties:
       Handler: index.handler
       Runtime: nodejs6.10
       CodeUri: .
-      Description: Demonstrates a Play_with_Mariam skill built with the Amazon Alexa Skills Kit.
+      Description: Demonstrates a DynamicContent skill built with the Amazon Alexa Skills Kit.
       MemorySize: 128
       Timeout: 3
       Policies:

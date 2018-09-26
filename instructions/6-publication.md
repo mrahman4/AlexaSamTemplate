@@ -1,4 +1,4 @@
-# Build An Alexa Play-with-Mariam Skill
+# Build An Alexa Alexa-Nodejs-Dynamic-Content Skill
 <img src="https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/quiz-game/header._TTH_.png" />
 
 [![Voice User Interface](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/1-locked._TTH_.png)](./1-voice-user-interface.md)[![Lambda Function](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/2-locked._TTH_.png)](./2-lambda-function.md)[![Connect VUI to Code](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/3-locked._TTH_.png)](./3-connect-vui-to-code.md)[![Testing](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/4-loecked._TTH_.png)](./5-testing.md)[![Customization](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/5-locked._TTH_.png)](./5-customization.md)[![Publication](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/navigation/6-on._TTH_.png)](./6-publication.md)
@@ -56,18 +56,18 @@ We are almost done!  The last step is to add the metadata that your skill will u
 
 7.  **Provide a comprehensive list of keywords for users that are searching for new skills.**  This is an optional field, and searching the [Alexa app](http://alexa.amazon.com) or the [skill store](http://www.amazon.com/skills) will also find the words in your Skill Name and descriptions, so you don't need to overdo it.  That being said, if there are words that you want users to find your skill with, you should include them here.  Separate the keywords with commas.
 
-8. **Privacy Policy URL.** This is an optional field, and should not be required for this Play-with-Mariam skill sample.  You can leave it blank.
+8. **Privacy Policy URL.** This is an optional field, and should not be required for this Alexa-Nodejs-Dynamic-Content skill sample.  You can leave it blank.
 
 9. **Terms of Use URL.** This is also optional, and you can leave it blank.
 
 10. When you're ready, click **Save and Continue** at the bottom of the screen to move onto **Privacy & Compliance**
 
-11. *  **Does this skill allow users to make purchases or spend real money?** For this Play-with-Mariam skill, the answer is no.  For future skills, make sure you answer this appropriately.
+11. *  **Does this skill allow users to make purchases or spend real money?** For this Alexa-Nodejs-Dynamic-Content skill, the answer is no.  For future skills, make sure you answer this appropriately.
 
-    *  **Does this Alexa skill collect users' personal information?** Again, for this Play-with-Mariam skill, the answer is no.  If you do collect information about a user, such as names, email addresses, phone numbers, and so forth, ensure that you answer Yes to this question.
+    *  **Does this Alexa skill collect users' personal information?** Again, for this Alexa-Nodejs-Dynamic-Content skill, the answer is no.  If you do collect information about a user, such as names, email addresses, phone numbers, and so forth, ensure that you answer Yes to this question.
         *  Answering "yes" to this question will also require you to provide a link to your Privacy Policy on the previous page.
 
-    *  **Is your skill directed to children under the age of 13?** Because you customized this skill with data you provided, it is possible that you created a skill that targets children under the age of 13.  For this Play-with-Mariam skill, the answer is **no** because it doesn't target a specific age group.
+    *  **Is your skill directed to children under the age of 13?** Because you customized this skill with data you provided, it is possible that you created a skill that targets children under the age of 13.  For this Alexa-Nodejs-Dynamic-Content skill, the answer is **no** because it doesn't target a specific age group.
         * Factors to consider in determining if this skill is directed to children under 13 include:
             * Subject matter of the skill
             * Presence of child-oriented activities and incentives

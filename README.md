@@ -1,4 +1,4 @@
-# Build An Alexa Play-with-Mariam Skill
+# Build An Alexa Alexa-Nodejs-Dynamic-Content Skill
 <img src="https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/quiz-game/header._TTH_.png" />
 
 This Alexa template enable developer to easily implement a dynamic content Skill. And event after publishing the Skill he can still modify and maintain the skill content without need to change in Alexa model or Lambda code. This skill depend on data saved in DynamoDB table. You can configure every thing inside the database. voice tone, images that will appear in Alexa cards, Alexa reply in case user need help, order of conversation, different content every session,... etc  
