@@ -15,7 +15,7 @@
                             "type": "AMAZON.Animal"
                         },
                         {
-                            "name": "answer_atrist",
+                            "name": "answer_artist",
                             "type": "AMAZON.Artist"
                         },
                         {
