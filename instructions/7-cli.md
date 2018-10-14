@@ -23,13 +23,16 @@ This readme assumes you have your developer environment ready to go and that you
 2. **Clone** the repository.
 
 	```bash
-	$ git clone https://github.com/alexa/skill-sample-nodejs-fact/
+	$ git clone https://github.com/mrahman4/AlexaSamTemplate.git
+        or fork your own clone to work on 
+	$ git clone https://github.com/ForkedUserName/AlexaSamTemplate.git
+
 	```
 
 3. If it's your first time using it, **initialize** the [ASK CLI](https://developer.amazon.com/docs/smapi/quick-start-alexa-skills-kit-command-line-interface.html?&sc_category=Owned&sc_channel=RD&sc_campaign=Evangelism2018&sc_publisher=github&sc_content=Content&sc_detail=fact-nodejs-V2_CLI-1&sc_funnel=Convert&sc_country=WW&sc_medium=Owned_RD_Evangelism2018_github_Content_fact-nodejs-V2_CLI-1_Convert_WW_beginnersdevs&sc_segment=beginnersdevs) by navigating into the repository and running npm command: `ask init`. Follow the prompts.
 
 	```bash
-	$ cd skill-sample-nodejs-fact
+	$ cd AlexaSamTemplate/
 	$ ask init
 	```
 
