@@ -40,8 +40,11 @@ This readme assumes you have your developer environment ready to go and that you
 
 	```bash
 	$ cd lambda/custom
-	$ npm install  lodash.filter
-	$ npm install
+
+
+	$ npm install lodash.filter
+	$ npm install math
+	$ npm install alexa-sdk// early version of alexa sdk 1
 	```
 
 ### Deployment
