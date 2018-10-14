@@ -12,6 +12,6 @@
     "aws-sdk": "2.162.0",
     "alexa-sdk": "1.0.22",
     "math": "0.0.3",
-    "lodash.filter": "4.6.0",
+    "lodash.filter": "4.6.0"
   }
 }
