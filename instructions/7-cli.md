@@ -40,6 +40,7 @@ This readme assumes you have your developer environment ready to go and that you
 
 	```bash
 	$ cd lambda/custom
+	$ npm install  lodash.filter
 	$ npm install
 	```
 
