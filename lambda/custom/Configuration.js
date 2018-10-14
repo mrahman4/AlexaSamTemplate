@@ -1,11 +1,12 @@
 ﻿const configuration = {
 
     //tables
-    PARTS_TABLE: process.env.PartsTableName, //"StoryPartsTable",
-    STORIES_TABLE: process.env.StoriesTableName//"StoriesTable",
+    PARTS_TABLE: process.env.PartsTableName,  //"StoryPartsTable",
+    STORIES_TABLE: process.env.StoriesTableName, //"StoriesTable"
 
 
     //Intents types
+
     NUMBER_INTENT: 1,
     STRING_INTENT: 4,
 
