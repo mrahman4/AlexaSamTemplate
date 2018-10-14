@@ -475,7 +475,7 @@ function getSlotValue(intent, answerType) {
 /*
 {answer_actor}
 {answer_animal}
-{answer_atrist}
+{answer_artist}
 {answer_athlete}
 {answer_author}
 {answer_book}
