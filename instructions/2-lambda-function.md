@@ -55,8 +55,8 @@ In the [first step of this guide](./1-voice-user-interface.md), we built the Voi
 
 3.  **Click "Tables" at the left hand side of the screen to go to tables console.**
 
-3.  **Create Stories table** Click on "Create Table" button at the top of the screen. Then add information for the first table. Table name is "StoriesTable" and Primary partition key is "pkStoryID" with type "Number". then clikc on "create" button at the bottom of the screen
+3.  **Create Stories table** Click on "Create Table" button at the top of the screen. Then add information for the first table. Table name is "StoriesTable" and Primary partition key is "pkStoryID" with type "Number". then click on "create" button at the bottom of the screen
 
-4.  **Create parts table** Click on "Create Table" button at the top of the screen. Then add information for the 2nd table. Table name is "StoryPartsTable".  Primary partition key is "pkStoryID" with type "Number". Primary sort key is "skPartID" with type "Number". then clikc on "create" button at the bottom of the screen
+4.  **Create parts table** Click on "Create Table" button at the top of the screen. Then add information for the 2nd table. Table name is "StoryPartsTable".  Primary partition key is "pkStoryID" with type "Number". Primary sort key is "skPartID" with type "Number". then click on "create" button at the bottom of the screen
 
 [![Next](https://m.media-amazon.com/images/G/01/mobile-apps/dex/alexa/alexa-skills-kit/tutorials/general/buttons/button_next_connect_vui_to_code._TTH_.png)](./3-connect-vui-to-code.md)
