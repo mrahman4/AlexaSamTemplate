@@ -13,7 +13,7 @@ To **Get Started** click the button below:
 [![Get Started](https://camo.githubusercontent.com/db9b9ce26327ad3bac57ec4daf0961a382d75790/68747470733a2f2f6d2e6d656469612d616d617a6f6e2e636f6d2f696d616765732f472f30312f6d6f62696c652d617070732f6465782f616c6578612f616c6578612d736b696c6c732d6b69742f7475746f7269616c732f67656e6572616c2f627574746f6e732f627574746f6e5f6765745f737461727465642e5f5454485f2e706e67)](./instructions/1-voice-user-interface.md)
 
 Or click [here](./instructions/7-cli.md) for instructions using the ASK CLI (command line interface). Kindly note that The ASK CLI (command line interface) cannot complete this task below and provides only partial completion. Therefore it is better to follow the instructions below, by pressing the ** Getting Started **.
- 
+
 
 ## How to fill the Database
 
@@ -243,10 +243,180 @@ Each story part can be a question that user need to answer to move the next part
 </table>
 
 ## Lambda configuration
-
 1- **Configuration.js** : This file contains all lookup such: part type values, last type value, supported intent types. You can add or modify as you want
-
 2- **app.js** : don't forget to check TODO comments.
+
+## Example
+This template is used to build "Play with Mariam" skill which is certified and live. Skill targeting children and its purpose is to teach them new things by engage them in different challenges. Every time child use the skill he will find a different random story, in each story he will be asked different questions and child have to answer those questions to move to next question. And Skill give help to child if he answer wrongly.  
+
+StoriesTable for this skill as the below
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>pkStoryID</b></th>
+    <th class="tg-yw4l"><b>firstPartID</b></th>
+    <th class="tg-yw4l"><b>name</b></th>
+    <th class="tg-yw4l"><b>target</b></th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">1</td>
+    <td class="tg-yw4l">1</td>
+    <td class="tg-yw4l">Grandfather buzzles</td>
+    <td class="tg-yw4l">Mathematics challenges.</td>  
+  </tr>
+  <tr>
+    <td class="tg-yw4l">2</td>
+    <td class="tg-yw4l">20</td>
+    <td class="tg-yw4l">Countries and Flags</td>
+    <td class="tg-yw4l">Information about different countries.</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l">3</td>
+    <td class="tg-yw4l">40</td>
+    <td class="tg-yw4l">In the Zoo</td>
+    <td class="tg-yw4l">Information about animals.</td>
+  </tr>
+</table>
+
+As the above table, this skill has 3 stories. Every time user use this skill one of those stories will be selected randomly. There is 2 mandatory fields: pkStoryID & firstPartID. Other fields are not used by engine of skill.
+As you can see story with ID = 2, will check table StoryPartsTable to find part which has ID = 40.   
+
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>pkStoryID</b></th>
+    <th class="tg-yw4l">2</th>
+    <th class="tg-yw4l"></th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b>skPartID</b></td>
+    <td class="tg-yw4l">20</td>
+    <th class="tg-yw4l"></th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b>lastPart</b></td>
+    <td class="tg-yw4l">0</td>
+    <th class="tg-yw4l">This part is not the last part in story #2</th>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b>partType</b></td>
+    <td class="tg-yw4l">1</td>
+    <td class="tg-yw4l">Alexa will give user 2 options, and he should choose one of them</td>
+  </tr>
+
+  <tr>
+    <td class="tg-yw4l"><b>speechOutput</b></td>
+    <td class="tg-yw4l"><prosody rate=\"medium\"> Today is first day in school after summer vacation. <break time=\"1s\"/> Mariam is very excited to return back to her friends, teachers and lectures. <break time=\"1s\"/> In her first class, miss Sarah said, <break time=\"1s\"/> Good morning my little heroes, today we will play a small nice game. Game name is Around the world. I’ll choose random students; <break time=\"1s\"/> each student will tell us about a country that he had visited during last summer vacation <break time=\"1s\"/> without telling us the name of the country. <break time=\"1s\"/> Rest of us should guess the country name. <break time=\"1s\"/> Winner will be the one who will correctly answer more questions. <break time=\"1s\"/> Tell me first, do you want to guess the Country name <break time=\"1s\"/> or Country flag color?. </prosody></td>
+    <td class="tg-yw4l">This what Alexa will say. You can use Alexa SSML language. User can choose either country or flag</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b>repromptSpeech</b></td>
+    <td class="tg-yw4l">Today is first day in school after summer vacation. Mariam is very excited to return back to her friends, teachers and lectures. In her first class, miss Sarah said, Good morning my little heroes, today we will play a small nice game. Game name is Around the world. I’ll choose random students; each student will tell us about a country that he had visited during last summer vacation without telling us the name of the country. Rest of us should guess the country name. Winner will be the one who will correctly answer more questions. Tell me first, do you want to guess the Country name or Country flag color?.</td>
+    <td class="tg-yw4l"></td>
+  </tr>
+
+  <tr>
+    <td class="tg-yw4l"><b>cardTitle</b></td>
+    <td class="tg-yw4l">Name or Flag</td>
+    <td class="tg-yw4l">The title of the card in mobile app</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b>cardContent</b></td>
+    <td class="tg-yw4l">Country Name or Flag Color ?</td>
+    <td class="tg-yw4l">The content of the card in mobile app</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b>largeImageUrl</b></td>
+    <td class="tg-yw4l">https://.....</td>
+    <td class="tg-yw4l">URL for the large image that will be displayed in the Card. Check Alexa requirements in picture sizes and format</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b>smallImageUrl</b></td>
+    <td class="tg-yw4l">https://.....</td>
+    <td class="tg-yw4l">URL for the large image that will be displayed in the Card. Check Alexa requirements in picture sizes and format</td>
+  </tr>
+
+  <tr>
+    <td class="tg-yw4l"><b>option1PartID</b></td>
+    <td class="tg-yw4l">22</td>
+    <td class="tg-yw4l">if user select this option, next part will be the part has ID = 22</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b>option1Type</b></td>
+    <td class="tg-yw4l">4</td>
+    <td class="tg-yw4l"> '4' means that we expect user answer to be a string. check Configuration.js to customize values based on your need</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b>option1Answer<b></td>
+    <td class="tg-yw4l">Country Name</td>
+    <td class="tg-yw4l">if user want to select first option he need to say 'Country Name' </td>
+  </tr>
+
+  <tr>
+    <td class="tg-yw4l"><b>option2PartID</b></td>
+    <td class="tg-yw4l">42</td>
+    <td class="tg-yw4l">if user select this option, next part will be the part has ID = 42</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b>option2Type</b></td>
+    <td class="tg-yw4l">4</td>
+    <td class="tg-yw4l"> '4' means that we expect user answer to be a string. check Configuration.js to customize values based on your need</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b>option2Answer</b></td>
+    <td class="tg-yw4l">Flag Color</td>
+    <td class="tg-yw4l">if user want to select 2nd option he need to say 'Flag Color' </td>
+  </tr>
+
+
+  <tr>
+    <td class="tg-yw4l"><b>targetAnswerNextPart</b></td>
+    <td class="tg-yw4l">0</td>
+    <td class="tg-yw4l">Not used in this part type</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b>targetAnswerType</b></td>
+    <td class="tg-yw4l">0</td>
+    <td class="tg-yw4l">Not used in this part type</td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b>targetAnswer</b></td>
+    <td class="tg-yw4l">0</td>
+    <td class="tg-yw4l">Not used in this part type</td>
+  </tr>
+
+  <tr>
+    <td class="tg-yw4l"><b>hintSpeechOutput</b></td>
+    <td class="tg-yw4l">Choose Game you like, Say either Country Name or Say Flag Color</td>
+    <td class="tg-yw4l"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b>hintRepromptSpeech</b></td>
+    <td class="tg-yw4l">Choose Game you like, Say either Country Name or Say Flag Color</td>
+    <td class="tg-yw4l"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b>hintCardTitle</b></td>
+    <td class="tg-yw4l">Name or Flag</td>
+    <td class="tg-yw4l"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b>hintCardContent</b></td>
+    <td class="tg-yw4l">Say Country Name or Say Flag Color</td>
+    <td class="tg-yw4l"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b>hintLargeImageUrl</b></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l"><b>hintSmallImageUrl</b></td>
+    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l"></td>
+  </tr>
+
+</table>
+First part in this story will ask user choose either the country name or flag color, and based on user choice dialogue will move forward.   
+
 
 ## Additional Resources
 
