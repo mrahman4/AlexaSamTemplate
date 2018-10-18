@@ -282,19 +282,19 @@ As you can see story with ID = 2, will check table StoryPartsTable to find part 
 
 <table class="tg">
   <tr>
-    <th class="tg-yw4l"><b>pkStoryID</b></th>
-    <th class="tg-yw4l">2</th>
-    <th class="tg-yw4l"></th>
+    <td class="tg-yw4l"><b>pkStoryID</b></td>
+    <td class="tg-yw4l">2</td>
+    <td class="tg-yw4l"></td>
   </tr>
   <tr>
     <td class="tg-yw4l"><b>skPartID</b></td>
     <td class="tg-yw4l">20</td>
-    <th class="tg-yw4l"></th>
+    <td class="tg-yw4l"></td>
   </tr>
   <tr>
     <td class="tg-yw4l"><b>lastPart</b></td>
     <td class="tg-yw4l">0</td>
-    <th class="tg-yw4l">This part is not the last part in story #2</th>
+    <td class="tg-yw4l">This part is not the last part in story #2</td>
   </tr>
   <tr>
     <td class="tg-yw4l"><b>partType</b></td>
@@ -406,12 +406,12 @@ As you can see story with ID = 2, will check table StoryPartsTable to find part 
   <tr>
     <td class="tg-yw4l"><b>hintLargeImageUrl</b></td>
     <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l">optional</td>
   </tr>
   <tr>
     <td class="tg-yw4l"><b>hintSmallImageUrl</b></td>
     <td class="tg-yw4l"></td>
-    <td class="tg-yw4l"></td>
+    <td class="tg-yw4l">optional</td>
   </tr>
 
 </table>
