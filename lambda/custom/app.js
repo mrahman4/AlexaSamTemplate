@@ -17,15 +17,15 @@ const languageString = {
             'ASK_MESSAGE_START': 'Would you like to start playing?',
             'REPEAT_QUESTION_MESSAGE': 'To repeat the last question, say, repeat. ',
             'STOP_MESSAGE': 'Would you like to keep playing? Say Done to end the journey or Say Continue to spend more time with Mariam ',
-            'HELP_MESSAGE': 'Mariam is smart girl who love to learn new things and always accept challanges ' +
-                            'She needs help from her friends to pass any challange she face ' +
+            'HELP_MESSAGE': 'Mariam is smart girl who love to learn new things and always accept challenges ' +
+                            'She needs help from her friends to pass any challenge she faces ' +
                             'You are one of Mariam friends. Please help her by giving her correct answers ' +
-                            'for her challanges ' +
+                            'for her challenges ' +
                             'To start a new journey at any time, say, start game. ',
-            'HELP_REPROMPT': 'Mariam is smart girl who love to learn new things and always accept challanges ' +
-                             'She needs help from her friends to pass any challange she face ' +
+            'HELP_REPROMPT': 'Mariam is smart girl who love to learn new things and always accept challenges ' +
+                             'She needs help from her friends to pass any challenge she faces ' +
                             'You are one of Mariam friends. Please help her by giving her correct answers ' +
-                            'for her challanges ' +
+                            'for her challenges ' +
                             'To start a new journey at any time, say, start game. ',
             'NO_MESSAGE': 'Ok, we\'ll play another time. Goodbye!',
             'CANCEL_MESSAGE': 'Ok, let\'s play again soon.',
@@ -36,7 +36,7 @@ const languageString = {
 };
 
 const STORY_STATES = {
-    START: '_STARTMODE', //Welcome & choose story in rondam way.
+    START: '_STARTMODE', //Welcome & choose story in random way.
     INSIDE_STORY: '_INSIDE_STORY', //Reading Stories Parts.
     HELP: '_HELPMODE', // The user is asking for help.
 };
