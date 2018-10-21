@@ -21,7 +21,7 @@ This time when Miriam took on the other companies Assai AI engine character Miri
 
 ## Sponsorship
 Miriam was toast of the evening with a large amount of sponsorship. SAMantha said wise investment in new property on Seattle Sea Port complex was be a good investment.
-So a new apartment for Miriam was needed so the whole of Seattle Sea port was recreated as a map then new building apartment were added onto a new database serverless system.
+So a new apartment for Miriam was needed so the whole of Seattle Sea port was recreated as a map then new building apartment were added onto a new dynamic database serverless system.
 
 
 ## Adult years
