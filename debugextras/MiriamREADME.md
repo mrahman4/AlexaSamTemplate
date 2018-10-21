@@ -19,4 +19,6 @@ Miriam was evening large amount of sponsorship and SAMantha said wise investment
 So a new apartment for Miriam was needed so the whole of Seattle Sea port was recreated as a map then new building apartment were added onto a new database serverless system.
 
 
+## Adult years
 
+In 2018 Miriam starts out on her own journeys looking at the example story she has been given by her father. So now her parents left her to run by herself.
