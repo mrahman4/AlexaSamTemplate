@@ -20,7 +20,7 @@ The games convention 2017 arrived and now Miriam showed of over 50 evening and d
 This time when Miriam took on the other companies Assai AI engine character Miriram showed real class and finished the opponents first time.
 
 ## Sponsorship
-Miriam was toast of the evening large amount of sponsorship. SAMantha said wise investment in new property on Seattle Sea Port complex was be a good investment.
+Miriam was toast of the evening with a large amount of sponsorship. SAMantha said wise investment in new property on Seattle Sea Port complex was be a good investment.
 So a new apartment for Miriam was needed so the whole of Seattle Sea port was recreated as a map then new building apartment were added onto a new database serverless system.
 
 
