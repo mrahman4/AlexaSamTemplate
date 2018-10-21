@@ -1,9 +1,12 @@
 ### About Miriam
-This readme assumes you have your developer environment ready to go and that you have some familiarity with picture of Miriam and want here background.
+This readme assumes you have your developer environment ready to go and that you have some familiarity with picture of [Miriam]( https://github.com/jimshalo10/AlexaSamTemplate/blob/master/debugextras/WhoAmIMiriam.jpg) and want to know her read her Biography .
+
 ## Background
-Miriam Mohamed-Hassan was born in 2007 in Seattle WA at Unreal Engine Studios, her parents were Anita Mohamed and Mohamed Hassan. There occupations were well matched Anita was a graphic designer and wanted a daughter, she could not have in the world outside the Studios. 
+Miriam Mohamed-Hassan was born in 2007 in Seattle WA at Unreal Engine Studios, her parents were Anita Mohamed and Mohamed Hassan. There occupations were well matched Anita was a graphic designer and wanted a daughter, she could not have in the world outside the Studios.
+ 
 ## Conception 
 She told her colleague Mohamed and he suggested she draw a picture of Miriam the labour was going to be long as in 2005 everything had to be committed to paper as designer babies were very fashionable and computing time though vast was very expensive.
+
 ## Labour of love
 Long months of work in evening and nights followed and soon the pictures were signed off by the new Head of Game design SAMantha . She herself wanted a daughter, strong athletic, able to stand her ground against new male attacker that another Studio was building.
 ## Birth of Miriam Mohamed-Hassan 
