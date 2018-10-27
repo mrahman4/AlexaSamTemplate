@@ -36,19 +36,13 @@ This readme assumes you have your developer environment ready to go and that you
 	$ ask init
 	```
 
-4. Install npm dependencies by navigating into the `/lambda/custom` directory and running the npm command: `npm install`
+4. Install npm dependencies by navigating into the `/lambda/custom` directory and running the npm command: `npm update`
 
 	```bash
 	$ cd lambda/custom
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 39823e1c5686187235435d3e767a69595a0984e3
-	$ npm install lodash.filter
-	$ npm install math
-	$ npm install alexa-sdk// early version of alexa sdk 1
+	$ npm update
 	```
+
 
 ### Deployment
 
