@@ -51,13 +51,13 @@ Resources:
     Properties:
       TableName:
         Ref: PartsTableName
-        AttributeDefinitions:
-          -
-            AttributeName: "pkStoryID"
-            AttributeType: N
-          -
-            AttributeName: "skPartID"
-            AttributeType: N
+      AttributeDefinitions:
+        -
+          AttributeName: "pkStoryID"
+          AttributeType: N
+        -
+          AttributeName: "skPartID"
+          AttributeType: N
       KeySchema:
         - 
           AttributeName: "pkStoryID"
