@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
-Description: Demonstrates a Play_with_Mariam skill built with the Amazon Alexa Skills Kit.
+Description: Demonstrates building Alexa skill dynamic content. 
 Parameters:
   StoriesTableName:
     Type: String
@@ -35,9 +35,14 @@ Resources:
     Properties:
       TableName:
         Ref: StoriesTableName
-      PrimaryKey:
-        Name: pkStoryID
-        Type: Number
+      AttributeDefinitions:
+          -
+            AttributeName: "pkStoryID"
+            AttributeType: N
+      KeySchema:
+        - 
+          AttributeName: "pkStoryID"
+          KeyType: "HASH"
       ProvisionedThroughput:
         ReadCapacityUnits: 1
         WriteCapacityUnits: 1
@@ -48,14 +53,18 @@ Resources:
         Ref: PartsTableName
         AttributeDefinitions:
           -
-            AttributeName: pkStoryID
-            AttributeType: S
+            AttributeName: "pkStoryID"
+            AttributeType: N
           -
-            AttributeName: skPartID
-            AttributeType: S
-      PrimaryKey:
-        Name: pkStoryID
-        Type: Number
+            AttributeName: "skPartID"
+            AttributeType: N
+      KeySchema:
+        - 
+          AttributeName: "pkStoryID"
+          KeyType: "HASH"
+        - 
+          AttributeName: "skPartID"
+          KeyType: "RANGE"
       ProvisionedThroughput:
         ReadCapacityUnits: 1
         WriteCapacityUnits: 1
