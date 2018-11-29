@@ -14,7 +14,7 @@ Resources:
   DynamicContentSkill:
     Type: 'AWS::Serverless::Function'
     Properties:
-      Handler: index.handler
+      Handler: app.handler
       Runtime: nodejs6.10
       CodeUri: .
       Description: Demonstrates a DynamicContent skill built with the Amazon Alexa Skills Kit.
