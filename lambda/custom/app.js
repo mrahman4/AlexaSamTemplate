@@ -10,6 +10,7 @@ var storiesDAO = require('./StoriesDAO');
 
 const APP_ID = "amzn1.ask.skill.xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"; // TODO replace with your app ID (OPTIONAL)
 
+// TODO replace messages with your customized messages
 const languageString = {
     'en': {
         'translation': {
